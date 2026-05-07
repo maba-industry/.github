@@ -22,5 +22,5 @@
 ## Contact
 
 - 🌐 Website: [maba.co.kr](https://www.maba.co.kr)
-- 📧 Email: developer@maba.co.kr
+- 📧 Email: tech@maba.co.kr
 - 📍 Location: Jeonju & Seoul, South Korea
