@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 🔐 보안 취약점 제보
+    url: mailto:tech@maba.co.kr
+    about: 보안 문제는 공개 이슈로 올리지 말고 이메일로 비공개 제보해 주세요.
+  - name: 💬 사업 · 제품 문의
+    url: https://www.maba.co.kr
+    about: 개발 이슈가 아닌 문의는 회사 홈페이지를 통해 남겨주세요.
