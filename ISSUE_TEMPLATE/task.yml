@@ -1,0 +1,49 @@
+name: 📋 작업 (Task)
+description: 리팩터링, 문서, 배포, 조사 등 버그·기능이 아닌 작업을 등록합니다.
+title: "[Task] "
+labels: ["task"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 작업 종류
+      options:
+        - 리팩터링 / 기술 부채
+        - 문서 작성 · 보완
+        - 빌드 / 배포 / 인프라
+        - 테스트 추가
+        - 의존성 업데이트
+        - 조사 · 기술 검토 (Spike)
+        - 기타
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: 목표
+      description: 이 작업으로 무엇을 달성하려는지 적어주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 배경 · 이유
+      description: 왜 지금 필요한지, 미루면 어떤 비용이 생기는지.
+
+  - type: textarea
+    id: todo
+    attributes:
+      label: 할 일
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: 완료 조건
+      description: 검증 방법이 있으면 함께 적어주세요.

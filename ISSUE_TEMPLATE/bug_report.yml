@@ -1,0 +1,98 @@
+name: 🐛 버그 리포트
+description: 동작하지 않거나 예상과 다르게 동작하는 문제를 알려주세요.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        버그 제보 감사합니다. 아래 항목을 채워주시면 원인 파악이 훨씬 빨라집니다.
+        보안 취약점은 이 템플릿이 아니라 tech@maba.co.kr 로 비공개 제보해 주세요.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 제품 / 영역
+      description: 문제가 발생한 영역을 선택해 주세요.
+      options:
+        - 차량용 CMS
+        - 모바일 앱 (Android)
+        - 모바일 앱 (iOS)
+        - 임베디드 / 펌웨어
+        - 백엔드 / API
+        - 웹사이트
+        - 인프라 / CI
+        - 기타 · 모르겠음
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 무슨 일이 일어났나요?
+      description: 실제로 관찰한 현상을 한두 문장으로 적어주세요.
+      placeholder: 차량 목록 화면에서 새로고침하면 앱이 종료됩니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대한 동작
+      placeholder: 목록이 최신 데이터로 갱신되어야 합니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 방법
+      description: 순서대로 적어주세요. 재현이 안 되면 "간헐적"이라고 적어주세요.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 환경
+      description: 아는 것만 적어주셔도 됩니다.
+      value: |
+        - 버전 / 커밋:
+        - OS / 기기:
+        - 브라우저 (해당 시):
+        - 서버 환경: dev / staging / prod
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 로그 · 스크린샷
+      description: 에러 로그, 스택 트레이스, 화면 캡처를 붙여주세요. 개인정보와 인증 토큰은 꼭 가려주세요.
+      render: shell
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 심각도
+      options:
+        - Critical — 서비스 전체 중단 · 데이터 손실
+        - High — 핵심 기능 사용 불가
+        - Medium — 불편하지만 우회 가능
+        - Low — 사소한 결함 · UI 문제
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 확인 사항
+      options:
+        - label: 비슷한 이슈가 이미 등록되어 있지 않은지 검색했습니다.
+          required: true
+        - label: 로그와 첨부 파일에서 민감 정보(개인정보, 토큰, 비밀번호)를 제거했습니다.
+          required: true
